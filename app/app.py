@@ -10,7 +10,7 @@ def register():
         password = request.form['passwordregister']
         passwordconfirm = request.form['passwordregisterconfirm']
         email = request.form['emailregister']
-        if password != passwordconfirm:
+        if password != passwordconfirm or name == "" or username == "":
             return render_template('error.html')
         else: 
             dictLog = {
@@ -38,9 +38,11 @@ def login():
             error = 'Invalid username or password. Please try again !'
     return render_template('login.html', error = error)
 
-@app.route('/home', methods = ['GET','POST'])
-def home():
-    return render_template('firstpage.html')
+# @app.route('/home', methods = ['GET','POST'])
+# def home():
+#     if request.method == 'POST':
+
+#     return render_template('homepage.html')
 
 if __name__ == "__main__":
     app.run()
