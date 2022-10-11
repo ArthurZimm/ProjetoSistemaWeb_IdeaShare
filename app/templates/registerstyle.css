@@ -12,15 +12,15 @@ body{
 
 /*-----for border----*/
 .container{
-   font-family:Roboto,sans-serif;
-     background-image:url(https://image.freepik.com/free-vector/dark-blue-blurred-background_1034-589.jpg) ;
-   
+font-family:Roboto,sans-serif;
+    background-image:url(https://image.freepik.com/free-vector/dark-blue-blurred-background_1034-589.jpg) ;
+
     border-style: 1px solid grey;
     margin: 0 auto;
     text-align: center;
     opacity: 0.8;
     margin-top: 67px;
-  box-shadow: 2px 5px 5px 0px #eee;
+box-shadow: 2px 5px 5px 0px #eee;
     max-width: 500px;
     padding-top: 10px;
     height: 363px;
@@ -44,7 +44,7 @@ body{
 #lname{
     margin-top:5px;
 }
-     
+    
 
 /*---for heading-----*/
 .heading{
@@ -55,9 +55,9 @@ body{
     padding-top:10px;
 }
 /*-------for email----------*/
- /*------label----*/
+/*------label----*/
 #email{
-     margin-top: 5px;
+    margin-top: 5px;
 }
 /*-----------for Password--------*/
     /*-------label-----*/
@@ -80,13 +80,13 @@ body{
 margin-top: 6px;
 }
 /*------------for phone Number--------*/
-     /*----------label--------*/
+    /*----------label--------*/
 .pno{
     font-size: 18px;
     margin-left: -13px;
     margin-top: 10px;
     color: #ff9;
-   
+
 }	
 
 /*--------------for Gender---------------*/
@@ -124,12 +124,11 @@ margin-top: 6px;
     margin-top: 16px;
     box-shadow: 0px 2px 2px 0px white;
         
-  }
+}
 .btn.btn-warning:hover {
-   box-shadow: 2px 1px 2px 3px #99ccff;
-   background:#5900a6;
-   color:#fff;
-   transition: background-color 1.15s ease-in-out,border-color 1.15s ease-in-out,box-shadow 1.15s ease-in-out;
-   
+box-shadow: 2px 1px 2px 3px #99ccff;
+background:#5900a6;
+color:#fff;
+transition: background-color 1.15s ease-in-out,border-color 1.15s ease-in-out,box-shadow 1.15s ease-in-out;
+
 }	 
-     

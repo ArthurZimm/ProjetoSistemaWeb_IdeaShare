@@ -38,11 +38,10 @@ def login():
             error = 'Invalid username or password. Please try again !'
     return render_template('login.html', error = error)
 
-# @app.route('/home', methods = ['GET','POST'])
-# def home():
-#     if request.method == 'POST':
+@app.route('/home', methods = ['GET','POST'])
+def home():
+    return render_template('homepage.html')
 
-#     return render_template('homepage.html')
 
 if __name__ == "__main__":
     app.run()
