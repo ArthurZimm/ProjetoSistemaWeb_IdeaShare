@@ -40,8 +40,57 @@ def login():
 
 @app.route('/home', methods = ['GET','POST'])
 def home():
+    errors = []
+    try:
+        if request.method == 'POST':
+            if request.form['curso_python_link']:
+                return redirect('/cursopython')
+            elif request.form['curso_Java_link']:
+                return redirect('/cursopython')
+            elif request.form['curso_C++_link']:
+                return redirect('/cursocplusplus')
+            elif request.form['curso_JavaScript_link']:
+                return redirect('/cursojavascript')
+            elif request.form['curso_git_link']:
+                return redirect('/cursogit')
+            elif request.form['curso_c#_link']:
+                return redirect('/cursocsharpie')
+    except: 
+        errors.append(
+                "Unable to get URL. Please make sure it's valid and try again."
+            )
     return render_template('homepage.html')
 
+@app.route('/cursopython', methods = ['GET','POST'])
+def pythonroute():
+    return render_template('pythoncurso.html')
+
+@app.route('/python_aula_01', methods = ['GET','POST'])
+def aula_um():
+    if request.method == 'POST':
+        if request.form['btn_back_to_home_python']:
+            return redirect('/cursopython')
+    return render_template('./cursopythonvideos/videoUM.html')
+
+@app.route('/python_aula_02', methods = ['GET','POST'])
+def aula_dois():
+    return render_template('./cursopythonvideos/videoDOIS.html')
+
+@app.route('/python_aula_03', methods = ['GET','POST'])
+def aula_tres():
+    return render_template('./cursopythonvideos/videoTRES.html')
+
+@app.route('/python_aula_04', methods = ['GET','POST'])
+def aula_quatro():
+    return render_template('./cursopythonvideos/videoQUATRO.html')
+
+@app.route('/python_aula_05', methods = ['GET','POST'])
+def aula_cinco():
+    return render_template('./cursopythonvideos/videoCINCO.html')
+
+@app.route('/python_aula_06', methods = ['GET','POST'])
+def aula_seis():
+    return render_template('./cursopythonvideos/videoSEIS.html')
 
 if __name__ == "__main__":
     app.run()
