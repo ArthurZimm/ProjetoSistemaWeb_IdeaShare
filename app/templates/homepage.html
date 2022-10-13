@@ -20,7 +20,7 @@
             <div class="row features">
                 <div class="col-sm-6 col-lg-4 item"><i class="fa fa-map-marker icon"></i>                   
                     <form action="" method="post">
-                        <input type="submit" value="Python" name = "curso_python_link"/>
+                        <input type="button" value="Python" name = "curso_python_link" onclick="redirecionar('cursopython')"/>
                     </form>
                         <p class="description">Neste curso você aprenderá a linguagem de programação que vem crescendo muito! <br>
                         <br> Sem pré requisitos!
@@ -28,7 +28,7 @@
                 </div>
                 <div class="col-sm-6 col-lg-4 item"><i class="fa fa-clock-o icon"></i>
                     <form action="" method="post">
-                        <input type="submit" value="Java" name = "curso_java_link"/>
+                        <input type="button" value="Java" name = "curso_java_link" onclick="redirecionar('cursojava')"/>
                         <p class="description">Neste curso você aprenderá a linguagem de programação que vem crescendo muito! <br>
                         <br> Sem pré requisitos!
                         </p>
@@ -36,7 +36,7 @@
                 </div>
                 <div class="col-sm-6 col-lg-4 item"><i class="fa fa-list-alt icon"></i>
                     <form action="" method="post">
-                        <input type="submit" value="C++" name = "curso_C++_link"/>
+                        <input type="button" value="C++" name = "curso_C++_link" onclick="redirecionar('cursocplusplus')"/>
                         <p class="description">Neste curso você aprenderá a linguagem de programação que vem crescendo muito! <br>
                         <br> Sem pré requisitos!
                         </p>
@@ -44,7 +44,7 @@
                 </div>
                 <div class="col-sm-6 col-lg-4 item"><i class="fa fa-leaf icon"></i>
                     <form action="" method="post">
-                        <input type="submit" value="JavaScript" name = "curso_JavaScript_link"/>
+                        <input type="button" value="JavaScript" name = "curso_JavaScript_link" onclick="redirecionar('cursojavascript')"/>
                         <p class="description">Neste curso você aprenderá a linguagem de programação que vem crescendo muito! <br>
                         <br> Sem pré requisitos!
                         </p>
@@ -52,7 +52,7 @@
                 </div>
                 <div class="col-sm-6 col-lg-4 item"><i class="fa fa-plane icon"></i>
                     <form action="" method="post">
-                        <input type="submit" value="Git" name = "curso_git_link"/>
+                        <input type="button" value="Git" name = "curso_git_link" onclick="redirecionar('cursogit')"/>
                         <p class="description">Neste curso você aprenderá a linguagem de programação que vem crescendo muito! <br>
                         <br> Sem pré requisitos!
                         </p>
@@ -60,7 +60,7 @@
                 </div>
                 <div class="col-sm-6 col-lg-4 item"><i class="fa fa-phone icon"></i>
                     <form action="" method="post">
-                        <input type="submit" value="C#" name = "curso_c#_link"/>
+                        <input type="button" value="C#" name = "curso_c#_link" onclick="redirecionar('cursocsharpie')"/>
                         <p class="description">Neste curso você aprenderá a linguagem de programação que vem crescendo muito! <br>
                         <br> Sem pré requisitos!
                         </p>
@@ -71,6 +71,10 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const redirecionar  = (rota) => {
+            window.location.replace(`http://127.0.0.1:5000/${rota}`);
+        }
+    </script>
 </body>
-
 </html>

@@ -70,8 +70,10 @@
                 </a>
             </li>
         </ul>
-        
-    </div>
+        <form action="" method="post" name = "btn_back_to_">
+        <input type="button" value="Voltar" onclick="redirecionar('home')">
+    </form> 
+    </div>   
     <script>
         const redirecionar  = (rota) => {
             window.location.replace(`http://127.0.0.1:5000/${rota}`);
