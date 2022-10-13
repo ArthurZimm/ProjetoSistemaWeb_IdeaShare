@@ -43,14 +43,18 @@ class registration:
 
     @app.route('/login' ,methods = ['GET','POST'])  
     def login():      
-        error = None
         
-        if request.method == 'POST': 
-            if request.form['username'] == 'admin' and request.form['password'] == 'admin': 
-                return redirect('/home')
-            else: 
-                error = 'Invalid username or password. Please try again !'
-        return render_template('./login/login.html', error = error)
+        cursor = mysql.connection.cursor()
+        if request.method == 'POST':
+            cursor.execute("SELECT username, senha FROM users")
+            myresult = cursor.fetchall()
+            print(myresult)
+            for x in myresult:
+                if request.form['username'] == x[0] and request.form['password'] == x[1]:
+                    cursor.close()
+                    return redirect('/home')
+            cursor.close()
+        return render_template('./login/login.html')
 
 class home_page:
     @app.route('/home', methods = ['GET','POST'])
