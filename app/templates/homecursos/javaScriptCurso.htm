@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso JavaScript</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!------ Include the above in your HEAD tag ---------->
+</head>
+<body>
+    <div class="container">
+        
+        <p>
+            <h2>Curso de JavaScript</h2>
+            <p>Seja bem vindo ao curso de JavaScript, tenha bons estudos!</p>
+            <hr>
+        </p>
+        
+            <ul class="list-unstyled video-list-thumbs row">
+            <li class="col-lg-3 col-sm-4 col-xs-6">
+                <a onclick="redirecionar('JavaScript_aula_01')" title="1 -O que o JavaScript é capaz de fazer? - Curso JavaScript #01" target="_blank">
+                    <img src="https://images.passeidireto.com/thumbnails/video/109802555/thumb.jpg.large" alt="Barca" class="img-responsive" height="130px" />
+                    <h2>O que o JavaScript é capaz de fazer? - Curso JavaScript #01</h2>
+                    <span class="glyphicon glyphicon-play-circle"></span>
+                    <span class="duration">6:13</span>
+                </a>
+            </li>
+            <li class="col-lg-3 col-sm-4 col-xs-6">
+                <a onclick="redirecionar('JavaScript_aula_02')" title="2 - como chegamos até aqui? - Curso JavaScript #02" target="_blank">
+                    <img src="https://images.passeidireto.com/thumbnails/video/108947633/thumb.jpg.large" alt="Barca" class="img-responsive" height="130px" />
+                    <h2>como chegamos até aqui? - Curso JavaScript #02</h2>
+                    <span class="glyphicon glyphicon-play-circle"></span>
+                    <span class="duration">11:16</span>
+                </a>            
+            </li>
+            <li class="col-lg-3 col-sm-4 col-xs-6">
+                <a onclick="redirecionar('JavaScript_aula_03')" title="3 - COMO INSTALAR O JavaScript JDK E INTELLIJ NO WINDOWS (Atualizado) - CURSO DE JavaScript PARA INICIANTES #03.1" target="_blank">
+                    <img src="https://i.ytimg.com/vi/ebEhe5NBUw4/maxresdefault.jpg" alt="Barca" class="img-responsive" height="130px" />
+                    <h2>COMO INSTALAR O JavaScript JDK E INTELLIJ NO WINDOWS (Atualizado) - CURSO DE JavaScript PARA INICIANTES #03.1</h2>
+                    <span class="glyphicon glyphicon-play-circle"></span>
+                    <span class="duration">25:49</span>
+                </a>
+            </li>
+            <li class="col-lg-3 col-md-4 col-sm-4 col-xs-6" >
+                <a onclick="redirecionar('JavaScript_aula_04')" title="4- Criando o seu primeiro script - Curso JavaScript #04" target="_blank">
+                    <img src="https://i.ytimg.com/vi/FdePtO5JSd0/maxresdefault.jpg" alt="Barca" class="img-responsive" height="130px" />
+                    <h2>https://i.ytimg.com/vi/OmmJBfcMJA8/maxresdefault.jpg</h2>
+                    <span class="glyphicon glyphicon-play-circle"></span>
+                    <span class="duration">27:00</span>
+                </a>
+            </li>
+            <li class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                <a onclick="redirecionar('JavaScript_aula_05')" title="5- Variáveis e Tipos Primitivos - Curso JavaScript #05" target="_blank">
+                    <img src="https://i.ytimg.com/vi/QO5ItC3KqJg/maxresdefault.jpg" alt="Barca" class="img-responsive" height="130px" />
+                    <h2>Variáveis e Tipos Primitivos - Curso JavaScript #05</h2>
+                    <span class="glyphicon glyphicon-play-circle"></span>
+                    <span class="duration">18:07</span>
+                </a>
+            </li>
+            <li class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                <a onclick="redirecionar('JavaScript_aula_06')" title="6- Tratamento de dados - Curso JavaScript #06" target="_blank">
+                    <img src="https://i.ytimg.com/vi/BLMu7ebMC1A/maxresdefault.jpg" alt="Barca" class="img-responsive" height="130px" />
+                    <h2>Tratamento de dados - Curso JavaScript #06</h2>
+                    <span class="glyphicon glyphicon-play-circle"></span>
+                    <span class="duration">27:18</span>
+                </a>
+            </li>
+        </ul>
+        <form action="" method="post" name = "btn_back_to_">
+        <input type="button" value="Voltar" onclick="redirecionar('home')">
+    </form> 
+    </div>   
+    <script>
+        const redirecionar  = (rota) => {
+            window.location.replace(`http://127.0.0.1:5000/${rota}`);
+        }
+    </script>
+</body>
+</html>

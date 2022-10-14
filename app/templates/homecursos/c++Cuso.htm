@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso c++</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!------ Include the above in your HEAD tag ---------->
+</head>
+<body>
+    <div class="container">
+        
+        <p>
+            <h2>Curso do c++</h2>
+            <p>Seja bem vindo ao curso de C++, tenha bons estudos!</p>
+            <hr>
+        </p>
+        
+            <ul class="list-unstyled video-list-thumbs row">
+            <li class="col-lg-3 col-sm-4 col-xs-6">
+                <a onclick="redirecionar('C++_aula_01')" title="1 - Curso de C++ #01 - Introdução ao Curso" target="_blank">
+                    <img src="https://i.ytimg.com/vi/nUQKr-ey86Y/maxresdefault.jpg" alt="Barca" class="img-responsive" height="130px" />
+                    <h2>Curso de C++ #01 - Introdução ao Curso</h2>
+                    <span class="glyphicon glyphicon-play-circle"></span>
+                    <span class="duration">15:45</span>
+                </a>
+            </li>
+            <li class="col-lg-3 col-sm-4 col-xs-6">
+                <a onclick="redirecionar('C++_aula_02')" title="2 - Curso de C++ #02 - Computador Simplificado" target="_blank">
+                    <img src="https://i.ytimg.com/vi/IMRbGEEqzlI/maxresdefault.jpg" alt="Barca" class="img-responsive" height="130px" />
+                    <h2>Curso de C++ #02 - Computador Simplificado</h2>
+                    <span class="glyphicon glyphicon-play-circle"></span>
+                    <span class="duration">24:38</span>
+                </a>            
+            </li>
+            <li class="col-lg-3 col-sm-4 col-xs-6">
+                <a onclick="redirecionar('C++_aula_03')" title="3 - Curso de C++ #03 - Estrutura básica de um programa em C++" target="_blank">
+                    <img src="https://i.ytimg.com/vi/nUQKr-ey86Y/hqdefault.jpg" alt="Barca" class="img-responsive" height="130px" />
+                    <h2>Curso de C++ #03 - Estrutura básica de um programa em C++</h2>
+                    <span class="glyphicon glyphicon-play-circle"></span>
+                    <span class="duration">25:49</span>
+                </a>
+            </li>
+            <li class="col-lg-3 col-md-4 col-sm-4 col-xs-6" >
+                <a onclick="redirecionar('C++_aula_04')" title="4- Curso de C++ #04 - Variáveis em C++" target="_blank">
+                    <img src="https://i.ytimg.com/vi/nUQKr-ey86Y/hqdefault.jpg" alt="Barca" class="img-responsive" height="130px" />
+                    <h2>Curso de C++ #04 - Variáveis em C++</h2>
+                    <span class="glyphicon glyphicon-play-circle"></span>
+                    <span class="duration">31:00</span>
+                </a>
+            </li>
+            <li class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                <a onclick="redirecionar('C++_aula_05')" title="5- Curso de C++ #05 - Declarações múltiplas de variáveis, Constantes" target="_blank">
+                    <img src="https://i.ytimg.com/vi/o44fNZn4zNw/maxresdefault.jpg" alt="Barca" class="img-responsive" height="130px" />
+                    <h2>Curso de C++ #05 - Declarações múltiplas de variáveis, Constantes</h2>
+                    <span class="glyphicon glyphicon-play-circle"></span>
+                    <span class="duration">16:26</span>
+                </a>
+            </li>
+            <li class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                <a onclick="redirecionar('C++_aula_06')" title="6- Curso de C++ #06 - Variáveis Globais e Locais, Operadores matemáticos" target="_blank">
+                    <img src="https://i.ytimg.com/vi/BLMu7ebMC1A/maxresdefault.jpg" alt="Barca" class="img-responsive" height="130px" />
+                    <h2>Curso de C++ #06 - Variáveis Globais e Locais, Operadores matemáticos</h2>
+                    <span class="glyphicon glyphicon-play-circle"></span>
+                    <span class="duration">21:22</span>
+                </a>
+            </li>
+        </ul>
+        <form action="" method="post" name = "btn_back_to_">
+        <input type="button" value="Voltar" onclick="redirecionar('home')">
+    </form> 
+    </div>   
+    <script>
+        const redirecionar  = (rota) => {
+            window.location.replace(`http://127.0.0.1:5000/${rota}`);
+        }
+    </script>
+</body>
+</html>
