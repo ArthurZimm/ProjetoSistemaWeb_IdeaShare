@@ -65,7 +65,7 @@ class routes_redirect_course:
 
     @app.route('/cursojavascript', methods = ['GET','POST'])
     def javascript_route():
-        return render_template('./homecursos/javaScriptCurso.html')
+        return render_template('./homecursos/javascriptcurso.html')
 
     @app.route('/cursogit', methods = ['GET','POST'])
     def git_route():
@@ -124,6 +124,106 @@ class java_course_classes:
     @app.route('/java_aula_06', methods = ['GET','POST'])
     def aula_seis_java():
         return render_template('./cursos/cursoJavaVideos/videoSEIS.html')
+
+class cs_course_classes:
+    @app.route('/cs_aula_01', methods = ['GET','POST'])
+    def aula_um_cs():
+        return render_template('./cursos/cursocsvideos/videoUM.html')
+
+    @app.route('/cs_aula_02', methods = ['GET','POST'])
+    def aula_dois_cs():
+        return render_template('./cursos/cursocsvideos/videoDOIS.html')
+
+    @app.route('/cs_aula_03', methods = ['GET','POST'])
+    def aula_tres_cs():
+        return render_template('./cursos/cursocsvideos/videoTRES.html')
+
+    @app.route('/cs_aula_04', methods = ['GET','POST'])
+    def aula_quatro_cs():
+        return render_template('./cursos/cursocsvideos/videoQUATRO.html')
+
+    @app.route('/cs_aula_05', methods = ['GET','POST'])
+    def aula_cinco_cs():
+        return render_template('./cursos/cursocsvideos/videoCINCO.html')
+
+    @app.route('/cs_aula_06', methods = ['GET','POST'])
+    def aula_seis_cs():
+        return render_template('./cursos/cursocsvideos/videoSEIS.html')
+
+class javascript_course_classes:
+    @app.route('/javascript_aula_01', methods = ['GET','POST'])
+    def aula_um_javascript():
+        return render_template('./cursos/cursojsvideos/videoUm.html')
+
+    @app.route('/javascript_aula_02', methods = ['GET','POST'])
+    def aula_dois_javascript():
+        return render_template('./cursos/cursojsvideos/videoDois.html')
+
+    @app.route('/javascript_aula_03', methods = ['GET','POST'])
+    def aula_tres_javascript():
+        return render_template('./cursos/cursojsvideos/videoTres.html')
+
+    @app.route('/javascript_aula_04', methods = ['GET','POST'])
+    def aula_quatro_javascript():
+        return render_template('./cursos/cursojsvideos/videoQuatro.html')
+
+    @app.route('/javascript_aula_05', methods = ['GET','POST'])
+    def aula_cinco_javascript():
+        return render_template('./cursos/cursojsvideos/videoCinco.html')
+
+    @app.route('/javascript_aula_06', methods = ['GET','POST'])
+    def aula_seis_javascript():
+        return render_template('./cursos/cursojsvideos/videoSeis.html')
+
+class git_course_classes:
+    @app.route('/git_aula_01', methods = ['GET','POST'])
+    def aula_um_git():
+        return render_template('./cursos/cursoGitvideos/videoUM.html')
+
+    @app.route('/git_aula_02', methods = ['GET','POST'])
+    def aula_dois_git():
+        return render_template('./cursos/cursoGitvideos/videoDOIS.html')
+
+    @app.route('/git_aula_03', methods = ['GET','POST'])
+    def aula_tres_git():
+        return render_template('./cursos/cursoGitvideos/videoTRES.html')
+
+    @app.route('/git_aula_04', methods = ['GET','POST'])
+    def aula_quatro_git():
+        return render_template('./cursos/cursoGitvideos/videoQUATRO.html')
+
+    @app.route('/git_aula_05', methods = ['GET','POST'])
+    def aula_cinco_git():
+        return render_template('./cursos/cursoGitvideos/videoCINCO.html')
+
+    @app.route('/git_aula_06', methods = ['GET','POST'])
+    def aula_seis_git():
+        return render_template('./cursos/cursoGitvideos/videoSEIS.html')
+
+class cplusplus_course_classes:
+    @app.route('/cplusplus_aula_01', methods = ['GET','POST'])
+    def aula_um_cplusplus():
+        return render_template('./cursos/cursocplusplusvideos/videoUM.html')
+
+    @app.route('/cplusplus_aula_02', methods = ['GET','POST'])
+    def aula_dois_cplusplus():
+        return render_template('./cursos/cursocplusplusvideos/videoDOIS.html')
+
+    @app.route('/cplusplus_aula_03', methods = ['GET','POST'])
+    def aula_tres_cplusplus():
+        return render_template('./cursos/cursocplusplusvideos/videoTRES.html')
+
+    @app.route('/cplusplus_aula_04', methods = ['GET','POST'])
+    def aula_quatro_cplusplus():
+        return render_template('./cursos/cursocplusplusvideos/videoQUATRO.html')
+
+    @app.route('/cplusplus_aula_05', methods = ['GET','POST'])
+    def aula_cinco_cplusplus():
+        return render_template('./cursos/cursocplusplusvideos/videoCINCO.html')
+
+    @app.route('/cplusplus_aula_06', methods = ['GET','POST'])
+    def aula_seis_cplusplus():
+        return render_template('./cursos/cursocplusplusvideos/videoSEIS.html')
 
 
 if __name__ == "__main__":
