@@ -11,6 +11,10 @@ app.config['MYSQL_DB'] = 'idea_share'
 
 mysql = MySQL(app)
 
+@app.route('/', methods = ['GET','POST'])
+def main_page():
+    return render_template('./paginaPrincipal/principal.html')
+
 class registration:
     @app.route('/registro', methods = ['GET','POST'])
     def register():
@@ -53,51 +57,74 @@ class routes_redirect_course:
 
     @app.route('/cursojava', methods = ['GET','POST'])
     def java_route():
-        return render_template('./homecursos/pythoncurso.html')
+        return render_template('./homecursos/javacurso.html')
 
     @app.route('/cursocpluplus', methods = ['GET','POST'])
     def cplusplus_route():
-        return render_template('./homecursos/pythoncurso.html')
+        return render_template('./homecursos/cplusplus.html')
 
     @app.route('/cursojavascript', methods = ['GET','POST'])
     def javascript_route():
-        return render_template('./homecursos/pythoncurso.html')
+        return render_template('./homecursos/javaScriptCurso.html')
 
     @app.route('/cursogit', methods = ['GET','POST'])
     def git_route():
-        return render_template('./homecursos/pythoncurso.html')
+        return render_template('./homecursos/Gitcurso.html')
 
     @app.route('/cursocsharpie', methods = ['GET','POST'])
     def csharpie_route():
-        return render_template('./homecursos/pythoncurso.html')
+        return render_template('./homecursos/cscurso.html')
 
 class python_course_classes:
     @app.route('/python_aula_01', methods = ['GET','POST'])
-    def aula_um():
-        if request.method == 'POST':
-            if request.form['btn_back_to_home_python']:
-                return redirect('/cursopython')
-        return render_template('./cursopythonvideos/videoUM.html')
+    def aula_um_python():
+        return render_template('./cursos/cursopythonvideos/videoUM.html')
 
     @app.route('/python_aula_02', methods = ['GET','POST'])
-    def aula_dois():
-        return render_template('./cursopythonvideos/videoDOIS.html')
+    def aula_dois_python():
+        return render_template('./cursos/cursopythonvideos/videoDOIS.html')
 
     @app.route('/python_aula_03', methods = ['GET','POST'])
-    def aula_tres():
-        return render_template('./cursopythonvideos/videoTRES.html')
+    def aula_tres_python():
+        return render_template('./cursos/cursopythonvideos/videoTRES.html')
 
     @app.route('/python_aula_04', methods = ['GET','POST'])
-    def aula_quatro():
-        return render_template('./cursopythonvideos/videoQUATRO.html')
+    def aula_quatro_python():
+        return render_template('./cursos/cursopythonvideos/videoQUATRO.html')
 
     @app.route('/python_aula_05', methods = ['GET','POST'])
-    def aula_cinco():
-        return render_template('./cursopythonvideos/videoCINCO.html')
+    def aula_cinco_python():
+        return render_template('./cursos/cursopythonvideos/videoCINCO.html')
 
     @app.route('/python_aula_06', methods = ['GET','POST'])
-    def aula_seis():
-        return render_template('./cursopythonvideos/videoSEIS.html')
+    def aula_seis_python():
+        return render_template('./cursos/cursopythonvideos/videoSEIS.html')
+
+class java_course_classes:
+    @app.route('/java_aula_01', methods = ['GET','POST'])
+    def aula_um_java():
+        return render_template('./cursos/cursoJavaVideos/videoUM.html')
+
+    @app.route('/java_aula_02', methods = ['GET','POST'])
+    def aula_dois_java():
+        return render_template('./cursos/cursoJavaVideos/videoDOIS.html')
+
+    @app.route('/java_aula_03', methods = ['GET','POST'])
+    def aula_tres_java():
+        return render_template('./cursos/cursoJavaVideos/videoTRES.html')
+
+    @app.route('/java_aula_04', methods = ['GET','POST'])
+    def aula_quatro_java():
+        return render_template('./cursos/cursoJavaVideos/videoQUATRO.html')
+
+    @app.route('/java_aula_05', methods = ['GET','POST'])
+    def aula_cinco_java():
+        return render_template('./cursos/cursoJavaVideos/videoCINCO.html')
+
+    @app.route('/java_aula_06', methods = ['GET','POST'])
+    def aula_seis_java():
+        return render_template('./cursos/cursoJavaVideos/videoSEIS.html')
+
 
 if __name__ == "__main__":
     app.run()
