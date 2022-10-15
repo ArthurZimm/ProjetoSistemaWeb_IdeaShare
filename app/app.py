@@ -12,54 +12,39 @@ app.config['MYSQL_DB'] = 'idea_share'
 mysql = MySQL(app)
 
 class registration:
-    @app.route('/', methods = ['GET','POST'])
+    @app.route('/registro', methods = ['GET','POST'])
     def register():
         if request.method == 'POST':
             name = request.form['nameregister']
-            username = request.form['usernameregister']
             password = request.form['passwordregister']
-            passwordconfirm = request.form['passwordregisterconfirm']
             email = request.form['emailregister']
-            if password != passwordconfirm or name == "" or username == "":
-                return render_template('./login/error.html')
-            else: 
-                cursor = mysql.connection.cursor()
-                cursor.execute("INSERT INTO users(nome, username, senha, email) VALUES (%s, %s, %s, %s)", (name, username, password, email))
-                mysql.connection.commit()
-                cursor.close()
-                dictLog = {
-                    "name" : name,
-                    "username": username,
-                    "password" : password,
-                    "email" : email,
-                }
-                print(username)
-                print(password)
-                print(dictLog)
-                return redirect('/login')
-        return render_template('./login/registerpage.html')
+            cursor = mysql.connection.cursor()
+            cursor.execute("INSERT INTO users(nome, senha, email) VALUES (%s, %s, %s)", (name, password, email))
+            mysql.connection.commit()
+            cursor.close()
+            return redirect('/login')
+        return render_template('./registrar/registro.html')
 
 
 
     @app.route('/login' ,methods = ['GET','POST'])  
-    def login():      
-        
-        cursor = mysql.connection.cursor()
+    def login():             
         if request.method == 'POST':
-            cursor.execute("SELECT username, senha FROM users")
+            cursor = mysql.connection.cursor()
+            cursor.execute("SELECT nome, senha FROM users")
             myresult = cursor.fetchall()
-            print(myresult)
             for x in myresult:
                 if request.form['username'] == x[0] and request.form['password'] == x[1]:
                     cursor.close()
                     return redirect('/home')
+                
             cursor.close()
         return render_template('./login/login.html')
 
 class home_page:
     @app.route('/home', methods = ['GET','POST'])
     def home():
-        return render_template('homepage.html')
+        return render_template('./homepage/homepage.html')
 
 class routes_redirect_course:
     @app.route('/cursopython', methods = ['GET','POST'])
