@@ -1,0 +1,14 @@
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    border: 1px solid black;
+
+    background-color: chartreuse;
+}
+
+.itemCabecalho{
+    margin: 5px;
+
+}
