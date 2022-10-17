@@ -48,32 +48,87 @@ class registration:
 class home_page:
     @app.route('/home', methods = ['GET','POST'])
     def home():
+
         return render_template('./homepage/homepage.html')
 
 class routes_redirect_course:
     @app.route('/cursopython', methods = ['GET','POST'])
     def python_route():
-        return render_template('./homecursos/pythoncurso.html')
+        cursor = mysql.connection.cursor()
+        cursor.execute("SELECT avg(pontos) from python_point")
+        myresult_py = cursor.fetchall()
+        print(myresult_py[0][0])
+        if request.method == 'POST':
+            pontos = request.form['quantity_python']    
+            cursor.execute("INSERT INTO python_point(pontos) VALUES (%s)", (pontos))
+            mysql.connection.commit()
+            cursor.close()
+        return render_template('./homecursos/pythoncurso.html',media = round(myresult_py[0][0],2) )
 
     @app.route('/cursojava', methods = ['GET','POST'])
     def java_route():
-        return render_template('./homecursos/javacurso.html')
+        cursor = mysql.connection.cursor()
+        cursor.execute("SELECT avg(pontos) from java_point")
+        myresult_java = cursor.fetchall()
+        print(myresult_java[0][0])
+        if request.method == 'POST':
+            pontos = request.form['quantity_java']    
+            cursor.execute("INSERT INTO java_point(pontos) VALUES (%s)", (pontos))
+            mysql.connection.commit()
+            cursor.close()
+        return render_template('./homecursos/javacurso.html',media = round(myresult_java[0][0],2))
 
-    @app.route('/cursocpluplus', methods = ['GET','POST'])
+    @app.route('/cursocplusplus', methods = ['GET','POST'])
     def cplusplus_route():
-        return render_template('./homecursos/cplusplus.html')
+        cursor = mysql.connection.cursor()
+        cursor.execute("SELECT avg(pontos) from cplusplus_point")
+        myresult_cplus = cursor.fetchall()
+        print(myresult_cplus[0][0])
+        if request.method == 'POST':
+            pontos = request.form['quantity_cplusplus']    
+            cursor.execute("INSERT INTO cplusplus_point(pontos) VALUES (%s)", (pontos))
+            mysql.connection.commit()
+            cursor.close()
+        return render_template('./homecursos/cplusplus.html',media = round(myresult_cplus[0][0],2))
 
     @app.route('/cursojavascript', methods = ['GET','POST'])
     def javascript_route():
-        return render_template('./homecursos/javascriptcurso.html')
+        cursor = mysql.connection.cursor()
+        cursor.execute("SELECT avg(pontos) from javascript_point")
+        myresult_js = cursor.fetchall()
+        print(myresult_js[0][0])
+        if request.method == 'POST':
+            pontos = request.form['quantity_javascript']    
+            cursor.execute("INSERT INTO javascript_point(pontos) VALUES (%s)", (pontos))
+            mysql.connection.commit()
+            cursor.close()
+        return render_template('./homecursos/javascriptcurso.html',media = round(myresult_js[0][0],2))
 
     @app.route('/cursogit', methods = ['GET','POST'])
     def git_route():
-        return render_template('./homecursos/Gitcurso.html')
+        cursor = mysql.connection.cursor()
+        cursor.execute("SELECT avg(pontos) from git_point")
+        myresult_git = cursor.fetchall()
+        print(myresult_git[0][0])
+        if request.method == 'POST':
+            pontos = request.form['quantity_git']    
+            cursor.execute("INSERT INTO git_point(pontos) VALUES (%s)", (pontos))
+            mysql.connection.commit()
+            cursor.close()
+        return render_template('./homecursos/Gitcurso.html',media = round(myresult_git[0][0],2))
 
     @app.route('/cursocsharpie', methods = ['GET','POST'])
     def csharpie_route():
-        return render_template('./homecursos/cscurso.html')
+        cursor = mysql.connection.cursor()
+        cursor.execute("SELECT avg(pontos) from cs_point")
+        myresult_cs = cursor.fetchall()
+        print(myresult_cs[0][0])
+        if request.method == 'POST':
+            pontos = request.form['quantity_cs']    
+            cursor.execute("INSERT INTO cs_point(pontos) VALUES (%s)", (pontos))
+            mysql.connection.commit()
+            cursor.close()
+        return render_template('./homecursos/cscurso.html',media = round(myresult_cs[0][0],2))
 
 class python_course_classes:
     @app.route('/python_aula_01', methods = ['GET','POST'])
@@ -226,5 +281,6 @@ class cplusplus_course_classes:
         return render_template('./cursos/cursocplusplusvideos/videoSEIS.html')
 
 
+
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0', debug=True)
