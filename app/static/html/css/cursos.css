@@ -1,0 +1,18 @@
+#iframe{
+    text-align:center;
+}
+
+body{
+    background-image: url(../../../static/imgcursos/background.jpg); 
+}
+    
+h3{
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(185, 182, 182);
+    font-size: 30px;
+    text-align: center;
+}
+  
+.voltar{
+    text-align:center;
+}

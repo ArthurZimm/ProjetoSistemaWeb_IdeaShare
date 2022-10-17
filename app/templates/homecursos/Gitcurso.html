@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Git</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+     $(function(){
+     $("#cabecalho").load("../../static/html/cabecalho.html"); 
+     });
+    </script> 
+</head>
+<body>
+    <div id="cabecalho" name="home"></div>
+    <div class="container">
+        <p>
+            <h2>Curso de Git</h2>
+            <p>Seja bem vindo ao curso de Git, tenha bons estudos!</p>
+            <hr>
+        </p>
+        
+            <ul class="list-unstyled video-list-thumbs row">
+            <li class="col-lg-3 col-sm-4 col-xs-6">
+                <a onclick="redirecionar('git_aula_01')" title="1 - Curso gratuito Git e Github #1 - Introdução - O que é git?" target="_blank">
+                    <img src="https://i.ytimg.com/vi/2c7yWlpWDJM/maxresdefault.jpg" alt="Barca" class="img-responsive" height="130px" />
+                    <h2>1- Curso gratuito Git e Github #1 - Introdução - O que é git?</h2>
+                    <span class="glyphicon glyphicon-play-circle"></span>
+                    <span class="duration">12:34</span>
+                </a>
+            </li>
+            <li class="col-lg-3 col-sm-4 col-xs-6">
+                <a onclick="redirecionar('git_aula_02')" title="2 - Curso gratuito Git e Github #2 - Conceitos básicos do git" target="_blank">
+                    <img src="https://i.ytimg.com/vi/bZb0KiAbmNU/maxresdefault.jpg" alt="Barca" class="img-responsive" height="130px" />
+                    <h2>2- Curso gratuito Git e Github #2 - Conceitos básicos do git</h2>
+                    <span class="glyphicon glyphicon-play-circle"></span>
+                    <span class="duration">12:49</span>
+                </a>            
+            </li>
+            <li class="col-lg-3 col-sm-4 col-xs-6">
+                <a onclick="redirecionar('git_aula_03')" title="3 - Curso gratuito Git e Github #3 - Instalação e configuração" target="_blank">
+                    <img src="https://i.ytimg.com/vi/q9dnokwu7S8/maxresdefault.jpg" alt="Barca" class="img-responsive" height="130px" />
+                    <h2>Curso gratuito Git e Github #3 - Instalação e configuração</h2>
+                    <span class="glyphicon glyphicon-play-circle"></span>
+                    <span class="duration">12:35</span>
+                </a>
+            </li>
+            <li class="col-lg-3 col-md-4 col-sm-4 col-xs-6" >
+                <a onclick="redirecionar('git_aula_04')" title="4- Curso gratuito Git e Github #4 - Criando repositórios" target="_blank">
+                    <img src="https://i.ytimg.com/vi/Hw3ykxHHKiw/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAPltQApJ-KaGaq3ignwn3D7bp8PA" alt="Barca" class="img-responsive" height="130px" />
+                    <h2>4- Curso gratuito Git e Github #4 - Criando repositórios</h2>
+                    <span class="glyphicon glyphicon-play-circle"></span>
+                    <span class="duration">7:34</span>
+                </a>
+            </li>
+            <li class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                <a onclick="redirecionar('git_aula_05')" title="5- Curso gratuito Git e Github #5 - Colocando arquivos no stage" target="_blank">
+                    <img src="https://i.ytimg.com/vi/-PGHFtlEF0E/maxresdefault.jpg" alt="Barca" class="img-responsive" height="130px" />
+                    <h2>5- Curso gratuito Git e Github #5 - Colocando arquivos no stage</h2>
+                    <span class="glyphicon glyphicon-play-circle"></span>
+                    <span class="duration">4:40</span>
+                </a>
+            </li>
+            <li class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                <a onclick="redirecionar('git_aula_06')" title="6- Curso gratuito Git e Github #6 - Fazendo commits" target="_blank">
+                    <img src="https://i.ytimg.com/vi/n5WUYkkeCws/maxresdefault.jpg" alt="Barca" class="img-responsive" height="130px" />
+                    <h2>6- Curso gratuito Git e Github #6 - Fazendo commits</h2>
+                    <span class="glyphicon glyphicon-play-circle"></span>
+                    <span class="duration">6:47</span>
+                </a>
+            </li>
+        </ul>
+        <form method="POST">
+            <label for="quantity"><h2>Quantity (between 1 and 10):</h2></label>
+            <input type="number" id="quantity" name="quantity_git" min="1" max="10">          
+        </form> 
+        <h1>Pontuação média da materia: {{media}}</h1>
+    </div>   
+</body>
+</html>

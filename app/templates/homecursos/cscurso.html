@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso C</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+     $(function(){
+     $("#cabecalho").load("../../static/html/cabecalho.html"); 
+     });
+    </script> 
+</head>
+<body>
+    <div id="cabecalho" name="home"></div>
+    <div class="container">
+        <p>
+            <h2>Curso de C</h2>
+            <p>Seja bem vindo ao curso de C, tenha bons estudos!</p>
+            <hr>
+        </p>
+        
+            <ul class="list-unstyled video-list-thumbs row">
+            <li class="col-lg-3 col-sm-4 col-xs-6">
+                <a onclick="redirecionar('cs_aula_01')" title="1 - Programação em C - Aula 1 - Abertura do Curso de C - eXcript" target="_blank">
+                    <img src="https://i.ytimg.com/vi/FH7YrE0RjWE/maxresdefault.jpg" alt="Barca" class="img-responsive" height="130px" />
+                    <h2>1 - Programação em C - Aula 1 - Abertura do Curso de C - eXcript</h2>
+                    <span class="glyphicon glyphicon-play-circle"></span>
+                    <span class="duration">6:21</span>
+                </a>
+            </li>
+            <li class="col-lg-3 col-sm-4 col-xs-6">
+                <a onclick="redirecionar('cs_aula_02')" title="2 - Programação em C - Aula 2 - Code::Block" target="_blank">
+                    <img src="https://i.ytimg.com/vi/6EDsJ_MNN7w/maxresdefault.jpg" alt="Barca" class="img-responsive" height="130px" />
+                    <h2>2 - Programação em C - Aula 2 - Code::Block</h2>
+                    <span class="glyphicon glyphicon-play-circle"></span>
+                    <span class="duration">7:54</span>
+                </a>            
+            </li>
+            <li class="col-lg-3 col-sm-4 col-xs-6">
+                <a onclick="redirecionar('cs_aula_03')" title="3 - Programação em C - Aula 3 - Primeiro Programa - eXcript" target="_blank">
+                    <img src="https://i.ytimg.com/vi/ZYNCXzxVclQ/maxresdefault.jpg" alt="Barca" class="img-responsive" height="130px" />
+                    <h2>3 - Programação em C - Aula 3 - Primeiro Programa - eXcript</h2>
+                    <span class="glyphicon glyphicon-play-circle"></span>
+                    <span class="duration">3:59</span>
+                </a>
+            </li>
+            <li class="col-lg-3 col-md-4 col-sm-4 col-xs-6" >
+                <a onclick="redirecionar('cs_aula_04')" title="Programação em C - Aula 4 - Hello World - eXcript" target="_blank">
+                    <img src="https://i.ytimg.com/vi/LB9YMmmfnyc/maxresdefault.jpg" alt="Barca" class="img-responsive" height="130px" />
+                    <h2>4 - Programação em C - Aula 4 - Hello World - eXcript</h2>
+                    <span class="glyphicon glyphicon-play-circle"></span>
+                    <span class="duration">5:20</span>
+                </a>
+            </li>
+            <li class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                <a onclick="redirecionar('cs_aula_05')" title="5- Programação em C - Aula 5 - Code::Block - workspace - eXcript" target="_blank">
+                    <img src="https://i.ytimg.com/vi/kpxeaA-cjgg/maxresdefault.jpg" alt="Barca" class="img-responsive" height="130px" />
+                    <h2>5 - Programação em C - Aula 5 - Code::Block - workspace - eXcript</h2>
+                    <span class="glyphicon glyphicon-play-circle"></span>
+                    <span class="duration">14:54</span>
+                </a>
+            </li>
+            <li class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
+                <a onclick="redirecionar('cs_aula_06')" title="6- Programação em C - Aula 6 - Indentação e Comentários - eXcript" target="_blank">
+                    <img src="https://i.ytimg.com/vi/fdPaMspJBoE/maxresdefault.jpg" alt="Barca" class="img-responsive" height="130px" />
+                    <h2>6 - Programação em C - Aula 6 - Indentação e Comentários - eXcript</h2>
+                    <span class="glyphicon glyphicon-play-circle"></span>
+                    <span class="duration">8:27</span>
+                </a>
+            </li>
+        </ul>
+        <form method="POST">
+            <label for="quantity"><h2>Quantity (between 1 and 10):</h2></label>
+            <input type="number" id="quantity" name="quantity_cs" min="1" max="10">          
+        </form> 
+        <h1>Pontuação média da materia: {{media}}</h1>
+    </div>   
+</body>
+</html>

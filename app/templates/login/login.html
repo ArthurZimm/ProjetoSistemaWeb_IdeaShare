@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF 8">
+  <link rel="stylesheet" href = "../../static/loginstyle/loginstyle.css">
+    <title>Login</title>
+</head>
+
+<body>
+  <section class="area-login">
+    <div class="Login"> 
+    <div>
+      <img src = "../../static/imglogin/img.png">
+    </div>
+
+    <style TYPE="text/css">
+      body {background-image: url(../../static/imglogin/background.jpg); }
+  </style>
+
+    <form method="POST">
+      <input type = "text" name = "username" placeholder="Usuário" autofocus >
+      <input type="password" name = "password" placeholder="Senha">
+      <input type="submit" value="ENTRAR">
+    </form>
+    <p>Não tem uma conta?<a onclick = "redirecionar('registro')">Registre-se</a ></p>
+  </div>
+  </section>
+  <script>
+    const redirecionar  = (rota) => {
+        window.location.replace(`http://127.0.0.1:5000/${rota}`);
+    }
+</script>
+</body>
+</html>
