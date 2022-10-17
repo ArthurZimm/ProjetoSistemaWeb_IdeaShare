@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/static/html/css/cabecalho.css">
 
 <div class="cabecalho">
-    <input class="itemCabecalho"  type="button" value="Voltar" onclick="redirecionar('home')">
+    <input class="itemCabecalho"  type="button" value="Voltar" onclick="redirecionar(end)">
     <div class="itemCabecalho" >cabecalho</div>
     <a class="itemCabecalho" href="#">Menu</a>
 
@@ -11,4 +11,7 @@
     const redirecionar = (rota) => {
         window.location.replace(`http://127.0.0.1:5000/${rota}`);
     }
+
+    var valor = document.getElementById("cabecalho");
+    end = valor.getAttribute("name");
 </script>
