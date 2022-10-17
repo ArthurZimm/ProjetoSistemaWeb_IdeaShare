@@ -1,50 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link rel="stylesheet" href="../../../static/html/css/cursos.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
-
-    <body>
-        <style>
-    
-    #iframe{
-    
-      text-align:center;
-            
-    }
-          body {background-image: url(static/imgcursos/background.jpg); }
-      
-    
-        h3{
-            font-family: Arial, Helvetica, sans-serif;
-            color:rgb(185, 182, 182);
-            font-size: 30px;
-            text-align: center;
-        }
-    
-        .voltar{
-            text-align:center;
-           
-        }
-    
-        </style>
-
-    <div id="iframe"> <iframe width="560" height="315" src="https://www.youtube.com/watch?v=OJgu_KCCUSY&list=PLntvgXM11X6pi7mW0O4ZmfUI1xDSIbmTm&index=9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <h3>Tratamento de dados - Curso JavaScript #06</h3>
-</div>
-<div class = "voltar">
-    <form action="" method="post" name = "btn_back_to_">
-        <input type="button" value="Voltar" onclick="redirecionar('cursojavascript')">
-    </form> 
-</div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
-        const redirecionar  = (rota) => {
-            window.location.replace(`http://127.0.0.1:5000/${rota}`);
-        }
+        $(function () {
+            $("#cabecalho").load("../../../static/html/cabecalho.html");
+        });
     </script>
+</head>
+
+<body>
+    <div id="cabecalho" name="cursojavascript"></div>
+    <div id="iframe">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/OJgu_KCCUSY"
+            title="Tratamento de dados - Curso JavaScript #06" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        <h3>Tratamento de dados - Curso JavaScript #06</h3>
+    </div>
 </body>
+
 </html>
