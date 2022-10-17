@@ -5,12 +5,21 @@
     width: 100%;
     border: 1px solid black;
 
-    background-color: chartreuse;
+    background-color: rgb(95, 63, 31);
 
     margin-bottom: 20px;
 }
 
 .itemCabecalho{
     margin: 5px;
-
+}
+.itemprincipal{
+    font-size: 22px;
+    
+    margin: 5px;
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: white;
 }
