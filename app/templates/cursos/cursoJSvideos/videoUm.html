@@ -7,15 +7,42 @@
     <title>Document</title>
 </head>
 <body>
-    <iframe width="560" height="315" src="https://www.youthttps://www.youtube.com/watch?v=Ptbk2af68e8&list=PLntvgXM11X6pi7mW0O4ZmfUI1xDSIbmTm&index=3ube.com/watch?v=mRryrODqQcw&list=PLJ0AcghBBWSi6nK2CUkw9ngvwWB1gE8mL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <style>
+
+        #iframe{
+        
+          text-align:center;
+                
+        }
+              body {background-image: url(static/imgcursos/background.jpg); }
+          
+        
+            h3{
+                font-family: Arial, Helvetica, sans-serif;
+                color:rgb(185, 182, 182);
+                font-size: 30px;
+                text-align: center;
+            }
+        
+            .voltar{
+                text-align:center;
+               
+            }
+        
+            </style>
+
+    <div id="iframe"> <iframe width="560" height="315" src="https://www.youthttps://www.youtube.com/watch?v=Ptbk2af68e8&list=PLntvgXM11X6pi7mW0O4ZmfUI1xDSIbmTm&index=3ube.com/watch?v=mRryrODqQcw&list=PLJ0AcghBBWSi6nK2CUkw9ngvwWB1gE8mL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <h3>O que o JavaScript é capaz de fazer? - Curso JavaScript #01</h3>
     <form action="" method="post" name = "btn_back_to_">
         <input type="button" value="Voltar" onclick="redirecionar('cursojavascript')">
     </form> 
+</div>
+<div class = "voltar">
     <script>
         const redirecionar  = (rota) => {
             window.location.replace(`http://127.0.0.1:5000/${rota}`);
         }
     </script>
+    </div>
 </body>
 </html>

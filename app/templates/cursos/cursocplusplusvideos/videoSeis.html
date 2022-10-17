@@ -7,11 +7,37 @@
     <title>Document</title>
 </head>
 <body>
-    <iframe width="560" height="315" src="https://www.youtube.com/watch?v=bt__FYdvTOY&list=PLx4x_zx8csUjczg1qPHavU1vw1IkBcm40&index=7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <h3>Curso de C++ #06 - Variáveis Globais e Locais, Operadores matemáticos</h3>
+    <style>
+
+        #iframe{
+        
+          text-align:center;
+                
+        }
+              body {background-image: url(static/imgcursos/background.jpg); }
+          
+        
+            h3{
+                font-family: Arial, Helvetica, sans-serif;
+                color:rgb(185, 182, 182);
+                font-size: 30px;
+                text-align: center;
+            }
+        
+            .voltar{
+                text-align:center;
+               
+            }
+        
+            </style>
+    <div id="iframe"><iframe width="560" height="315" src="https://www.youtube.com/watch?v=bt__FYdvTOY&list=PLx4x_zx8csUjczg1qPHavU1vw1IkBcm40&index=7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class = "voltar">
+        <h3>Curso de C++ #06 - Variáveis Globais e Locais, Operadores matemáticos</h3>
     <form action="" method="post" name = "btn_back_to_">
         <input type="button" value="Voltar" onclick="redirecionar('cursocpluplus')">
     </form> 
+</div>
     <script>
         const redirecionar  = (rota) => {
             window.location.replace(`http://127.0.0.1:5000/${rota}`);
