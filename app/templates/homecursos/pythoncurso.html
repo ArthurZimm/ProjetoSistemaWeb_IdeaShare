@@ -17,7 +17,7 @@
     </script> 
 </head>
 <body>
-    <div id="cabecalho"></div>
+    <div id="cabecalho" name="home"></div>
     <div class="container"> 
         <p>
             <h2>Curso de Python</h2>
@@ -75,14 +75,5 @@
                 </a>
             </li>
         </ul>
-        <form action="" method="post" name = "btn_back_to_">
-        <input type="button" value="Voltar" onclick="redirecionar('home')">
-    </form> 
-    </div>   
-    <script>
-        const redirecionar  = (rota) => {
-            window.location.replace(`http://127.0.0.1:5000/${rota}`);
-        }
-    </script>
 </body>
 </html>
