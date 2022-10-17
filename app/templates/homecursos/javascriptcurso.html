@@ -22,7 +22,7 @@
         
             <ul class="list-unstyled video-list-thumbs row">
             <li class="col-lg-3 col-sm-4 col-xs-6">
-                <a onclick="redirecionar('JavaScript_aula_01')" title="1 -O que o JavaScript é capaz de fazer? - Curso JavaScript #01" target="_blank">
+                <a onclick="redirecionar('javascript_aula_01')" title="1 -O que o JavaScript é capaz de fazer? - Curso JavaScript #01" target="_blank">
                     <img src="https://images.passeidireto.com/thumbnails/video/109802555/thumb.jpg.large" alt="Barca" class="img-responsive" height="130px" />
                     <h2>O que o JavaScript é capaz de fazer? - Curso JavaScript #01</h2>
                     <span class="glyphicon glyphicon-play-circle"></span>
@@ -30,7 +30,7 @@
                 </a>
             </li>
             <li class="col-lg-3 col-sm-4 col-xs-6">
-                <a onclick="redirecionar('JavaScript_aula_02')" title="2 - como chegamos até aqui? - Curso JavaScript #02" target="_blank">
+                <a onclick="redirecionar('javascript_aula_02')" title="2 - como chegamos até aqui? - Curso JavaScript #02" target="_blank">
                     <img src="https://images.passeidireto.com/thumbnails/video/108947633/thumb.jpg.large" alt="Barca" class="img-responsive" height="130px" />
                     <h2>como chegamos até aqui? - Curso JavaScript #02</h2>
                     <span class="glyphicon glyphicon-play-circle"></span>
@@ -38,7 +38,7 @@
                 </a>            
             </li>
             <li class="col-lg-3 col-sm-4 col-xs-6">
-                <a onclick="redirecionar('JavaScript_aula_03')" title="3 - COMO INSTALAR O JavaScript JDK E INTELLIJ NO WINDOWS (Atualizado) - CURSO DE JavaScript PARA INICIANTES #03.1" target="_blank">
+                <a onclick="redirecionar('javascript_aula_03')" title="3 - COMO INSTALAR O JavaScript JDK E INTELLIJ NO WINDOWS (Atualizado) - CURSO DE JavaScript PARA INICIANTES #03.1" target="_blank">
                     <img src="https://i.ytimg.com/vi/ebEhe5NBUw4/maxresdefault.jpg" alt="Barca" class="img-responsive" height="130px" />
                     <h2>COMO INSTALAR O JavaScript JDK E INTELLIJ NO WINDOWS (Atualizado) - CURSO DE JavaScript PARA INICIANTES #03.1</h2>
                     <span class="glyphicon glyphicon-play-circle"></span>
@@ -46,7 +46,7 @@
                 </a>
             </li>
             <li class="col-lg-3 col-md-4 col-sm-4 col-xs-6" >
-                <a onclick="redirecionar('JavaScript_aula_04')" title="4- Criando o seu primeiro script - Curso JavaScript #04" target="_blank">
+                <a onclick="redirecionar('javascript_aula_04')" title="4- Criando o seu primeiro script - Curso JavaScript #04" target="_blank">
                     <img src="https://i.ytimg.com/vi/FdePtO5JSd0/maxresdefault.jpg" alt="Barca" class="img-responsive" height="130px" />
                     <h2>https://i.ytimg.com/vi/OmmJBfcMJA8/maxresdefault.jpg</h2>
                     <span class="glyphicon glyphicon-play-circle"></span>
@@ -54,7 +54,7 @@
                 </a>
             </li>
             <li class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
-                <a onclick="redirecionar('JavaScript_aula_05')" title="5- Variáveis e Tipos Primitivos - Curso JavaScript #05" target="_blank">
+                <a onclick="redirecionar('javascript_aula_05')" title="5- Variáveis e Tipos Primitivos - Curso JavaScript #05" target="_blank">
                     <img src="https://i.ytimg.com/vi/QO5ItC3KqJg/maxresdefault.jpg" alt="Barca" class="img-responsive" height="130px" />
                     <h2>Variáveis e Tipos Primitivos - Curso JavaScript #05</h2>
                     <span class="glyphicon glyphicon-play-circle"></span>
@@ -62,7 +62,7 @@
                 </a>
             </li>
             <li class="col-lg-3 col-md-4 col-sm-4 col-xs-6">
-                <a onclick="redirecionar('JavaScript_aula_06')" title="6- Tratamento de dados - Curso JavaScript #06" target="_blank">
+                <a onclick="redirecionar('javascript_aula_06')" title="6- Tratamento de dados - Curso JavaScript #06" target="_blank">
                     <img src="https://i.ytimg.com/vi/BLMu7ebMC1A/maxresdefault.jpg" alt="Barca" class="img-responsive" height="130px" />
                     <h2>Tratamento de dados - Curso JavaScript #06</h2>
                     <span class="glyphicon glyphicon-play-circle"></span>
@@ -70,8 +70,12 @@
                 </a>
             </li>
         </ul>
-        <form action="" method="post" name = "btn_back_to_">
+        <form method="POST">
+            <label for="quantity"><h2>Quantity (between 1 and 10):</h2></label>
+            <input type="number" id="quantity" name="quantity_javascript" min="1" max="10">          
+        </form> 
         <input type="button" value="Voltar" onclick="redirecionar('home')">
+        <h1>Pontuação média da materia: {{media}}</h1>
     </form> 
     </div>   
     <script>
